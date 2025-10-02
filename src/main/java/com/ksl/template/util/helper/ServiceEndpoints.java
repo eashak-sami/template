@@ -6,8 +6,10 @@ public interface ServiceEndpoints {
     }
 
     interface SampleController {
-        String CREATE = "";
-        String UPDATE = "/update";
-        String GET = "/{id}";
+        String CREATE = "/create";
+        String UPDATE = "/update/{id}";
+        String GET = "/details/{id}";
+        String DELETE = "/delete/{id}";
+        String SEARCH = "/search";
     }
 }

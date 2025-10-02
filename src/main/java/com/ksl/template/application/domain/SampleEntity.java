@@ -3,18 +3,16 @@ package com.ksl.template.application.domain;
 import com.ksl.template.application.enums.Status;
 import com.ksl.template.util.converter.StatusConverter;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "sample_info")
-public class SampleEntity {
+public class SampleEntity extends AuditBaseDomain {
 
     @Id
     @Column(name = "id")
